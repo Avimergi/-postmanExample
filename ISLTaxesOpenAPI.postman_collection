@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "531e9487-820f-4aca-be56-bd7bbc9d8a0e",
+		"name": "taxes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://openapi.taxes.gov.il/shaam/sandbox/longtimeacces",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "authUrl",
+							"value": "https://openapi.taxes.gov.il/shaam/sandbox/longtimetoken/oauth2/authorize ",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "use the client secret of youre app that was genrated in the portal",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "use the client id of youre app that was genrated in the portal",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://openapi.taxes.gov.il/shaam/sandbox/longtimetoken/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "scope",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost/openapitaxesdemo/app.html",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://openapi.taxes.gov.il/shaam/sandbox/emhkzhsbnj/runDate",
+					"protocol": "https",
+					"host": [
+						"openapi",
+						"taxes",
+						"gov",
+						"il"
+					],
+					"path": [
+						"shaam",
+						"sandbox",
+						"emhkzhsbnj",
+						"runDate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
