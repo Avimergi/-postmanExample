@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7d318b98-b566-417b-95f6-2e4754008335",
+		"_postman_id": "6069d111-67d4-4b1b-a0cd-306b0ceaaf85",
 		"name": "taxes",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,8 +15,18 @@
 					"type": "oauth2",
 					"oauth2": [
 						{
+							"key": "redirect_uri",
+							"value": "redirect uri",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/token",
+							"type": "string"
+						},
+						{
 							"key": "authUrl",
-							"value": "https://openapi.taxes.gov.il/shaam/sandbox/longtimetoken/oauth2/authorize ",
+							"value": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/authorize ",
 							"type": "string"
 						},
 						{
@@ -35,18 +45,8 @@
 							"type": "string"
 						},
 						{
-							"key": "accessTokenUrl",
-							"value": "https://openapi.taxes.gov.il/shaam/sandbox/longtimetoken/oauth2/token",
-							"type": "string"
-						},
-						{
 							"key": "scope",
 							"value": "scope",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "http://localhost/openapitaxesdemo/app.html",
 							"type": "string"
 						},
 						{
@@ -68,7 +68,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://openapi.taxes.gov.il/shaam/sandbox/emhkzhsbnj/runDate",
+					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/",
 					"protocol": "https",
 					"host": [
 						"openapi",
@@ -78,9 +78,8 @@
 					],
 					"path": [
 						"shaam",
-						"sandbox",
-						"emhkzhsbnj",
-						"runDate"
+						"tsandbox",
+						""
 					]
 				}
 			},
