@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "6069d111-67d4-4b1b-a0cd-306b0ceaaf85",
+		"_postman_id": "16964178-babd-40d8-bd5f-7ef41e7be48f",
 		"name": "taxes",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "https://openapi.taxes.gov.il/shaam/sandbox/longtimeacces",
+			"name": "get token using postman built in Authorization process",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -132,6 +132,116 @@
 					"path": [
 						"shaam",
 						"sandbox",
+						"longtimetoken",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authorization code (set your client id in params and cope the full path to browser after authanticating you will get the code in browser search url )",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://openapi.taxes.gov.il/shaam/production/longtimetoken/oauth2/authorize?response_type=code&client_id= App client id &scope=scope",
+					"protocol": "https",
+					"host": [
+						"openapi",
+						"taxes",
+						"gov",
+						"il"
+					],
+					"path": [
+						"shaam",
+						"production",
+						"longtimetoken",
+						"oauth2",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "client_id",
+							"value": " App client id "
+						},
+						{
+							"key": "scope",
+							"value": "scope"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic (paste here the clientid:clientsecret in base64)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "use the from the get authorization  request ",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "redirect uri",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "scope",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://openapi.taxes.gov.il/shaam/production/longtimetoken/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"openapi",
+						"taxes",
+						"gov",
+						"il"
+					],
+					"path": [
+						"shaam",
+						"production",
 						"longtimetoken",
 						"oauth2",
 						"token"
