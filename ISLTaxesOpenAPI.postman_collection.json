@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "16964178-babd-40d8-bd5f-7ef41e7be48f",
+		"_postman_id": "7d29c15b-bbb7-49b8-abea-6b4d47da0e05",
 		"name": "taxes",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29366591"
 	},
 	"item": [
 		{
@@ -15,6 +16,11 @@
 					"type": "oauth2",
 					"oauth2": [
 						{
+							"key": "authUrl",
+							"value": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/authorize",
+							"type": "string"
+						},
+						{
 							"key": "redirect_uri",
 							"value": "redirect uri",
 							"type": "string"
@@ -22,11 +28,6 @@
 						{
 							"key": "accessTokenUrl",
 							"value": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/token",
-							"type": "string"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/authorize ",
 							"type": "string"
 						},
 						{
@@ -68,7 +69,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/",
+					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/........",
 					"protocol": "https",
 					"host": [
 						"openapi",
@@ -79,7 +80,7 @@
 					"path": [
 						"shaam",
 						"tsandbox",
-						""
+						"........"
 					]
 				}
 			},
@@ -121,7 +122,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://openapi.taxes.gov.il/shaam/sandbox/longtimetoken/oauth2/token",
+					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/token",
 					"protocol": "https",
 					"host": [
 						"openapi",
@@ -131,7 +132,7 @@
 					],
 					"path": [
 						"shaam",
-						"sandbox",
+						"tsandbox",
 						"longtimetoken",
 						"oauth2",
 						"token"
@@ -153,7 +154,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://openapi.taxes.gov.il/shaam/production/longtimetoken/oauth2/authorize?response_type=code&client_id= App client id &scope=scope",
+					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/authorize?response_type=code&client_id= App client id &scope=scope",
 					"protocol": "https",
 					"host": [
 						"openapi",
@@ -163,7 +164,7 @@
 					],
 					"path": [
 						"shaam",
-						"production",
+						"tsandbox",
 						"longtimetoken",
 						"oauth2",
 						"authorize"
@@ -223,15 +224,10 @@
 							"value": "scope",
 							"type": "default"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "text"
-						}
-					}
+					]
 				},
 				"url": {
-					"raw": "https://openapi.taxes.gov.il/shaam/production/longtimetoken/oauth2/token",
+					"raw": "https://openapi.taxes.gov.il/shaam/tsandbox/longtimetoken/oauth2/token",
 					"protocol": "https",
 					"host": [
 						"openapi",
@@ -241,7 +237,7 @@
 					],
 					"path": [
 						"shaam",
-						"production",
+						"tsandbox",
 						"longtimetoken",
 						"oauth2",
 						"token"
