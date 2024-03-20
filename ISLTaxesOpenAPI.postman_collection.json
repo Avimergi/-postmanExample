@@ -33,7 +33,7 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "use the client secret of youre app that was genrated in the portal",
+							"value": "se the client secret of youre app that was genrated in the portal",
 							"type": "string"
 						},
 						{
